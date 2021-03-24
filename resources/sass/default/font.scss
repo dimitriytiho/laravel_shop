@@ -1,0 +1,53 @@
+@import "../config/mixins";
+@import "../config/blocks";
+
+
+.active_color {
+  color: $primary !important;
+}
+.active_bg {
+  background-color: $primary !important;
+}
+
+.text-sm {
+    font-size: $font-size-base-sm !important;
+}
+
+/*.font-primary {
+    font-weight: 300 !important;
+    font-family: $font-family-primary !important;
+    letter-spacing: 0;
+}*/
+
+h1, .h1 {
+    //font-family: $font-family-primary;
+    font-weight: $font-weight-light;
+    color: $secondary;
+}
+h2, .h2 {
+    //font-family: $font-family-primary;
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+    color: $secondary;
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-weight: $font-weight-bold;
+}
+.p {
+    font-size: $font-size-base !important;
+}
+
+// Цвет ссылок .a-color
+@each $color, $value in $colors {
+  .a-#{$color} {
+      @if $color == 'black' {
+          @include for-a($value, lighten($value, 25%));
+      } @else if ($color == 'dark') {
+          @include for-a($value, $primary);
+      } @else {
+          @include for-a($value, darken($value, 15%));
+      }
+  }
+}

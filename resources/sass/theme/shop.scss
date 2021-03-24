@@ -1,0 +1,22 @@
+@import "../config/mixins";
+@import "../config/blocks";
+
+
+.input_qty {
+    .form-control {
+        display: inline-block;
+        width: 72px;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: $ss) {
+    #cart_modal {
+        .btn {
+            padding-right: 1.3rem;
+            padding-left: 1.3rem;
+        }
+    }
+}

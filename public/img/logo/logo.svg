@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;fill:#0023C4;}
+	.st1{fill:#FF5CF4;}
+	.st2{display:none;}
+	.st3{display:inline;fill:#0023C4;}
+	.st4{fill:#0023C4;}
+</style>
+<path class="st0" d="M8.9-4.8v-57.6h40.8v10.8H21.2v12.2h27.9v10.8H21.2v23.8H8.9z"/>
+<ellipse class="st1" cx="9.5" cy="41.5" rx="9.5" ry="5.9"/>
+<path class="st0" d="M77.3-4.8v-4.3C74.4-5.7,69.5-3.7,64-3.7c-6.6,0-14.5-4.5-14.5-13.9c0-9.8,7.9-13.5,14.5-13.5
+	c5.5,0,10.5,1.8,13.2,5.1v-5.6c0-4.2-3.6-7-9.2-7c-4.5,0-8.6,1.6-12.2,4.9L51.7-41c5.1-4.5,11.7-6.6,18.2-6.6
+	c9.6,0.1,18.3,3.9,18.3,15.9v27L77.3-4.8L77.3-4.8z M77.3-14.8V-20c-1.8-2.4-5.3-3.6-8.8-3.6c-4.3,0-7.9,2.2-7.9,6.3
+	c0,3.9,3.5,6.1,7.9,6.1C72-11.2,75.5-12.4,77.3-14.8z"/>
+<g class="st2">
+	<path class="st3" d="M50.3,52.8v-9.6c23.6-17.5,30.5-23.4,30.5-30.5c0-5-4.6-7.5-9.3-7.5c-6.6,0-11.6,2.6-15.5,6.7l-7-8.1
+		c5.6-6.5,14.2-9.4,22.2-9.4c12.3,0,22,6.9,22,18.4c0,9.8-8.1,18.4-23.1,29.3h23.5v10.8L50.3,52.8L50.3,52.8z"/>
+</g>
+<rect x="19" y="0.5" class="st1" width="8.7" height="41"/>
+<polyline class="st4" points="27.7,8.2 48,8.2 48,0.5 27.7,0.5 "/>
+<polyline class="st4" points="27.7,24.5 47.6,24.5 47.6,16.9 27.7,16.9 "/>
+<rect x="21.2" y="-17" class="st0" width="12.3" height="11.3"/>
+</svg>

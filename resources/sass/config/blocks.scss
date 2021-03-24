@@ -1,0 +1,127 @@
+@import "params";
+@import "mixins";
+
+
+// Slick
+@mixin slick-dots($color: $black, $bottom: -50px) {
+    .slick-dots {
+        width: 100%;
+        padding-left: 0;
+        position: absolute;
+        bottom: $bottom;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style: none;
+        z-index: $z-index-min - 8;
+        @include flex-center(wrap);
+        li {
+            display: inline-block;
+            margin-right: $spacer * .9;
+            &.slick-active button {
+                width: 15px;
+                height: 15px;
+                background-color: transparent;
+                border: 2px solid $color;
+            }
+            button {
+                padding: 0;
+                width: 8px;
+                height: 8px;
+                font-size: 0;
+                background-color: $color;
+                border: none;
+                border-radius: 50%;
+                &:focus {
+                    outline: none;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    /*@media (max-width: $lg) {
+        .slick-dots {
+            @if $bottom == auto {
+                bottom: $bottom;
+            } @else {
+                bottom: $bottom * 2;
+            }
+        }
+    }*/
+    @media (max-width: $md) {
+        .slick-dots {
+            li {
+                margin-right: $spacer * .6;
+                line-height: .1;
+            }
+        }
+    }
+    @media (max-width: $sm) {
+        $rate: .8;
+        .slick-dots {
+            li {
+                margin-right: 15px * $rate;
+                &.slick-active button {
+                    width: 15px * $rate;
+                    height: 15px * $rate;
+                }
+                button {
+                    width: 8px * $rate;
+                    height: 8px * $rate;
+                }
+            }
+        }
+    }
+}
+
+@mixin slick-slider-arrow-inside($font-size: $font-size-base * 3.2, $color: $white) {
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba($color, .4);
+        font-size: $font-size;
+        cursor: pointer;
+        z-index: $z-index-min - 8;
+        @include transition();
+        &:hover {
+            color: rgba($color, .7);
+        }
+        .left {
+            left: $spacer * 2.4;
+        }
+        .right {
+            right: $spacer * 2.4;
+        }
+    }
+}
+
+@mixin slick-slider-arrow($top: 50%) { // top: $heightImg / 2 - 10
+    .slick-list {
+        width: 97%;
+        margin: 0 auto;
+    }
+    .slick-arrow {
+        position: absolute;
+        top: $top;
+        @if $top == 50% {
+            transform: translateY(-50%);
+        }
+        font-size: 1.2rem;
+        color: rgba($dark, .5);
+        cursor: pointer;
+        z-index: $z-index-min - 8;
+        @include transition();
+        &:hover {
+            color: $dark;
+        }
+    }
+    .right {
+        right: -.8rem;
+    }
+    .left {
+        left: -.8rem;
+    }
+}
