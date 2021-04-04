@@ -163,13 +163,13 @@ class TranslateController extends AppController
                     // Сообщение об ошибке: такой перевод уже есть
                     return redirect()
                         ->back()
-                        ->with('error', __('s.translation_already'));
+                        ->withErrors(__('s.translation_already'));
                 }
 
             } else {
                 return redirect()
                     ->back()
-                    ->with('error', __('s.something_went_wrong'));
+                    ->withErrors(__('s.something_went_wrong'));
             }
         }
 
@@ -220,7 +220,7 @@ class TranslateController extends AppController
         if (!$values) {
             return redirect()
                 ->back()
-                ->with('error', __('s.something_went_wrong'));
+                ->withErrors(__('s.something_went_wrong'));
         }
 
         $f = __FUNCTION__;

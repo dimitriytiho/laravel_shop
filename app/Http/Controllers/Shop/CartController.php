@@ -93,7 +93,7 @@ class CartController extends AppController
             ->find($productId);
 
         if (!$product) {
-            return redirect()->route('catalog')->with('error', __('s.product_not_found'));
+            return redirect()->route('catalog')->withErrors(__('s.product_not_found'));
         }
 
         // Добавляем в корзину
@@ -117,7 +117,7 @@ class CartController extends AppController
     {
         // Если нет товара
         if (!session()->has("cart.products.{$cartKey}")) {
-            return redirect()->route('catalog')->with('error', __('s.product_not_found'));
+            return redirect()->route('catalog')->withErrors(__('s.product_not_found'));
         }
 
         Cart::plus($cartKey);
@@ -136,7 +136,7 @@ class CartController extends AppController
     {
         // Если нет товара
         if (!session()->has("cart.products.{$cartKey}")) {
-            return redirect()->route('catalog')->with('error', __('s.product_not_found'));
+            return redirect()->route('catalog')->withErrors(__('s.product_not_found'));
         }
 
         Cart::minus($cartKey);
@@ -155,7 +155,7 @@ class CartController extends AppController
     {
         // Если нет товара
         if (!session()->has("cart.products.{$cartKey}")) {
-            return redirect()->route('catalog')->with('error', __('s.product_not_found'));
+            return redirect()->route('catalog')->withErrors(__('s.product_not_found'));
         }
 
         Cart::remove($cartKey);

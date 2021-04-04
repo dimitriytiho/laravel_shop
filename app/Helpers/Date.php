@@ -155,13 +155,10 @@ class Date
      */
     public static function listYear(int $minYear, int $maxYear = null)
     {
-        if ($minYear) {
+        if ($minYear && $minYear < $maxYear) {
             $minYear = substr($minYear, 0, 4);
             $maxYear = $maxYear ?: date('Y');
             $maxYear = substr($maxYear, 0, 4);
-            if ($minYear > $maxYear) {
-                return [];
-            }
 
             while ($minYear <= $maxYear) {
                 $year[] = $minYear;
